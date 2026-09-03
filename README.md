@@ -50,10 +50,12 @@ Main is repository ko lagatar update kar raha hu. Bahut jald isme ye saare advan
 ## 💻 How to Use These Notes
 
 1. **Browse Online:** Upar diye gaye links par click karke aap seedhe GitHub par hi saare notes padh sakte hain.
-2. **Clone & Practice Locally:** Agar aap saare code snippets ko apne computer par test karna chahte hain, toh is command ka use karke repository ko clone karein:
-   git clone https://github.com
+2. Clone & Practice Locally: Agar aap saare code snippets ko apne computer par test karna chahte hain, toh is command ka use karke repository ko clone karein:
 
----
+```bash
+git clone https://github.com
+```
+
 
 ## 🧑‍💻 Author & Connect with Me
 
