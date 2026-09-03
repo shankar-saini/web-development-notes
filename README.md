@@ -51,9 +51,7 @@ Main is repository ko lagatar update kar raha hu. Bahut jald isme ye saare advan
 
 1. **Browse Online:** Upar diye gaye links par click karke aap seedhe GitHub par hi saare notes padh sakte hain.
 2. **Clone & Practice Locally:** Agar aap saare code snippets ko apne computer par test karna chahte hain, toh is command ka use karke repository ko clone karein:
-   ```bash
    git clone https://github.com
-   ```
 
 ---
 
