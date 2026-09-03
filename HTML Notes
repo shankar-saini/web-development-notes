@@ -1,0 +1,294 @@
+HTML (Beginner → Intermediate → Advanced)
+
+## 🟢 BEGINNER LEVEL
+
+### 🔴 HTML kya hai
+**What is it?** HTML (HyperText Markup Language) webpage ka structure/skeleton banata hai — tags ke through content ko define karta hai.
+**Why used?** Bina HTML ke browser ko pata nahi chalega ki heading kaha hai, paragraph kaha hai, image kaha hai.
+**Syntax**
+```html
+<tagname>content</tagname>
+```
+**Example**
+```html
+<h1>Hello World</h1>
+```
+**Practice:** Ek blank .html file banao aur "Hello World" heading print karo.
+
+### 🔴 Basic HTML Structure
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <h1>Content yaha aata hai</h1>
+</body>
+</html>
+```
+**Important Points**
+- `<!DOCTYPE html>` browser ko batata hai ye HTML5 document hai
+- `<html>` root element hai
+- `<head>` me meta info hoti hai (page pe nahi dikhti)
+- `<body>` me visible content hota hai
+
+### 🔴 Tags, Elements, Attributes
+- **Tag** → `<p>` (markup)
+- **Element** → `<p>Text</p>` (opening tag + content + closing tag)
+- **Attribute** → extra info tag ke andar: `<img src="pic.jpg" alt="photo">`
+
+**Common Mistake:** Closing tag bhoolna (`<p>` likha but `</p>` nahi likha)
+
+### 🟡 Comments
+```html
+<!-- Ye comment hai, browser me nahi dikhega -->
+```
+
+### 🔴 Headings & Paragraph
+```html
+<h1>Biggest heading</h1>
+<h6>Smallest heading</h6>
+<p>Paragraph text</p>
+```
+**Important:** Sirf ek `<h1>` per page use karo (SEO ke liye best practice)
+
+### 🟡 Formatting Tags
+`<b>` bold, `<strong>` important bold, `<i>` italic, `<em>` emphasized italic, `<br>` line break, `<hr>` horizontal line
+
+### 🔴 Links
+```html
+<a href="https://google.com" target="_blank">Visit Google</a>
+```
+`target="_blank"` new tab me open karta hai.
+
+### 🔴 Images
+```html
+<img src="photo.jpg" alt="description" width="300">
+```
+`alt` accessibility aur SEO ke liye zaroori hai — image na load ho to text dikhta hai.
+
+### 🔴 Lists
+```html
+<ul>
+  <li>Unordered item</li>
+</ul>
+<ol>
+  <li>Ordered item</li>
+</ol>
+```
+
+### 🟡 Tables
+```html
+<table>
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>Rahul</td><td>21</td></tr>
+</table>
+```
+
+**Practice (Beginner)**
+1. Apna intro page banao (heading + paragraph + image)
+2. 5 links ki list banao
+3. Ek simple table banao (3 rows, 3 columns)
+
+---
+
+## 🟡 INTERMEDIATE LEVEL
+
+### 🔴 Forms
+```html
+<form action="/submit" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <button type="submit">Submit</button>
+</form>
+```
+**Important Points**
+- `action` → kaha data jayega
+- `method` → GET (URL me data) ya POST (body me data)
+- `name` attribute zaroori hai warna form data submit nahi hoga
+
+### 🔴 Input Types
+`text`, `email`, `password`, `number`, `date`, `checkbox`, `radio`, `file`, `range`, `color`, `submit`
+
+```html
+<input type="email" placeholder="Enter email">
+<input type="checkbox" checked> Remember me
+<input type="radio" name="gender" value="male"> Male
+```
+
+### 🔴 Labels
+```html
+<label for="email">Email</label>
+<input type="email" id="email">
+```
+`for` aur `id` match hone chahiye — accessibility ke liye important.
+
+### 🟡 Buttons, Select/Option, Textarea
+```html
+<select name="city">
+  <option value="jaipur">Jaipur</option>
+  <option value="delhi">Delhi</option>
+</select>
+<textarea rows="4" cols="30"></textarea>
+<button type="button">Click Me</button>
+```
+
+### 🔴 Form Validation Attributes
+`required`, `minlength`, `maxlength`, `pattern`, `min`, `max`
+
+```html
+<input type="text" required minlength="3" maxlength="10">
+```
+**Common Mistake:** Sirf HTML validation pe depend hona — backend validation bhi zaroori hai (frontend validation bypass ho sakti hai).
+
+### 🔴 Semantic HTML
+**What is it?** Tags jo apna meaning batate hain (structure + meaning dono).
+**Why used?** SEO better hota hai, accessibility better hoti hai, code readable hota hai.
+
+```html
+<header>Site header</header>
+<nav>Navigation links</nav>
+<main>
+  <section>
+    <article>Blog post</article>
+  </section>
+  <aside>Sidebar</aside>
+</main>
+<footer>Footer content</footer>
+```
+
+| Tag | Use |
+|---|---|
+| `header` | top section (logo, nav) |
+| `nav` | navigation links |
+| `main` | page ka main content (ek hi baar use) |
+| `section` | related content ka group |
+| `article` | independent content (blog, news) |
+| `aside` | sidebar/related info |
+| `footer` | bottom section |
+
+### 🟡 figure/figcaption
+```html
+<figure>
+  <img src="chart.png" alt="Sales chart">
+  <figcaption>Fig 1: Monthly Sales</figcaption>
+</figure>
+```
+
+### 🟡 audio/video
+```html
+<video src="movie.mp4" controls width="400"></video>
+<audio src="song.mp3" controls></audio>
+```
+
+### 🟡 iframe
+```html
+<iframe src="https://example.com" width="600" height="400"></iframe>
+```
+Kisi doosri website/content ko embed karne ke liye (YouTube video, Google Maps).
+
+### 🟡 details/summary
+```html
+<details>
+  <summary>Click to expand</summary>
+  <p>Hidden content dikhta hai click karne pe</p>
+</details>
+```
+
+### 🟡 Data Attributes
+```html
+<div data-user-id="42" data-role="admin">User</div>
+```
+Custom data store karne ke liye, JS se `element.dataset.userId` se access hota hai.
+
+**Practice (Intermediate)**
+1. Login form banao (email, password, remember me checkbox)
+2. Registration form banao with validation
+3. Ek blog page semantic HTML se structure karo (header, nav, article, footer)
+
+---
+
+## 🔵 ADVANCED LEVEL
+
+### 🔴 Meta Tags
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Page description for SEO">
+```
+**Important:** `viewport` meta tag responsive design ke liye compulsory hai.
+
+### 🟡 Favicon
+```html
+<link rel="icon" type="image/png" href="favicon.png">
+```
+
+### 🔴 SEO Basics
+- Ek hi `<h1>` per page
+- `<title>` unique aur descriptive rakho
+- `meta description` likho
+- `alt` text images me
+- Semantic tags use karo
+
+### 🔴 Accessibility Basics
+- Har image me `alt` text
+- Form inputs me `label`
+- Proper heading hierarchy (h1 → h2 → h3, skip mat karo)
+- Keyboard navigable (tab se navigate ho sake)
+
+### 🔵 ARIA Basics
+```html
+<button aria-label="Close menu">X</button>
+<div role="alert">Error message</div>
+```
+ARIA (Accessible Rich Internet Applications) screen readers ke liye extra context deta hai jab semantic HTML kaafi nahi hota.
+
+### 🔴 HTML Best Practices
+- Semantic tags use karo, `<div>` soup avoid karo
+- Lowercase tags/attributes likho
+- Indentation consistent rakho
+- Alt text hamesha do
+- Forms me proper labels do
+
+---
+
+## 📋 HTML Cheat Sheet
+
+| Category | Tags |
+|---|---|
+| Structure | `html`, `head`, `body`, `header`, `nav`, `main`, `footer` |
+| Text | `h1-h6`, `p`, `span`, `strong`, `em` |
+| Lists | `ul`, `ol`, `li` |
+| Links/Media | `a`, `img`, `video`, `audio`, `iframe` |
+| Forms | `form`, `input`, `label`, `select`, `textarea`, `button` |
+| Table | `table`, `tr`, `th`, `td` |
+| Semantic | `section`, `article`, `aside`, `figure`, `details` |
+
+## Common Mistakes
+- Closing tags miss karna
+- `alt` attribute skip karna
+- Multiple `<h1>` use karna
+- `div` overuse karna jab semantic tag available hai
+- Form `name` attribute bhoolna
+
+## Interview Questions
+1. Semantic HTML kya hai aur kyun important hai?
+2. `id` vs `class` me difference?
+3. `<script>` tag ko `head` vs `body` end me daalne me kya farak hai?
+4. `viewport` meta tag ka kaam kya hai?
+
+## Practice Tasks
+**Beginner:** Personal intro page, image gallery, simple table
+**Intermediate:** Registration form with validation, semantic blog layout
+**Advanced:** Full responsive-ready page structure with SEO meta tags, accessible form, embedded video
+
+## ✍️ Notebook Notes
+1. HTML structure: `!DOCTYPE → html → head → body`
+2. Semantic tags: header, nav, main, section, article, aside, footer
+3. Form essential: `name`, `id`, `label for`, `required`
+4. `alt` on images = SEO + accessibility
+5. Sirf ek `<h1>` per page
+6. `viewport` meta tag = responsive ke liye must
+7. Common input types: text, email, password, checkbox, radio, number
+8. `<a href target="_blank">` = new tab
